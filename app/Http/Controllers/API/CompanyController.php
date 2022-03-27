@@ -41,6 +41,7 @@ class CompanyController extends Controller
 
         Mail::send('mails.company_added_mail', [], function($message) {
             $message->to('admin@admin.com')
+                    ->from('noreply@sender.com')
                     ->subject('New Company Created');
         });
 
